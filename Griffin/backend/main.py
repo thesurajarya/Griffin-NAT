@@ -256,4 +256,10 @@ async def analyze_file(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    # Get the port from Render's environment, or default to 8000 for local dev
+    port = int(os.getenv("PORT", 8000))
+    
+    # Use 0.0.0.0 so it works on the cloud, and 127.0.0.1 for local safety
+    host = "0.0.0.0" if os.getenv("PORT") else "127.0.0.1"
+    
+    uvicorn.run("main:app", host=host, port=port, reload=True)
