@@ -24,7 +24,7 @@ const Home = () => {
             Network Threat <span className="text-blue-400">Intelligence</span>
           </h1>
           <p className="text-slate-300 max-w-lg mx-auto drop-shadow-md font-medium">
-            Upload a raw packet capture to passively discover assets, extract
+            Upload a PCAP to passively discover assets, extract
             service banners, and correlate vulnerabilities against the NVD
             database.
           </p>
