@@ -25,7 +25,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("soc_token", data.access_token);
-        navigate("/Home");
+        navigate("/dashboard");
       } else {
         setError("Invalid credentials. Access denied.");
       }
