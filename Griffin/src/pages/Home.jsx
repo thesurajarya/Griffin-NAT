@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import LetterGlitch from "../components/LetterGlitch";
 import UploadFile from "../components/UploadFile";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -52,6 +53,7 @@ const Home = () => {
         <UploadFile />
 
       </div>
+      <Footer />
     </div>
   );
 };
